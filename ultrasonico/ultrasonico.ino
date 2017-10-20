@@ -27,6 +27,7 @@ Serial.print("el contador va en ");
 Serial.println(contador);
 if(contador >2){
 Serial.println("toma foto!");
+delay(5000);
 contador=0;
 }
 }
@@ -34,6 +35,6 @@ else{
 contador=0;
 }
 Serial.println(distancia);
-delay(500);
+delay(700);
   
 }

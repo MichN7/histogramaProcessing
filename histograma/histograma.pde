@@ -1,13 +1,24 @@
+import processing.serial.*;
 int[] datos = {15,12, 10,5,3,8,2,1,0,9,10,11};
-
+String portName="/dev/ttyACM0";
+Serial port;
+int valor;
 void setup(){
   size(500,400);
   background(255);
   fill(255,0,0,30);
+  port=new Serial(this,portName,9600);
+   println(Serial.list()); 
+  
 }
 int countF = 400;
 
 void draw(){
+  if(port.available()>0){
+    valor=port.read();
+   println(valor);
+   delay(1000);
+  }
   for(int x = 0; x < datos.length; x++){
     //rect(40*x, 450-datos[x],35, datos[x]+30);
     int sig = x + 3;
@@ -44,4 +55,6 @@ void draw(){
   text(13, 35, height-230);
   text(14, 35, height-240);
   text(15, 35, height-250);
+  
+  
 }
