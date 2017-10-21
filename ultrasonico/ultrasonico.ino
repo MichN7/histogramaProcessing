@@ -23,10 +23,11 @@ if(distancia<55 && distancia>25){
 //Serial.println("la distancia es ");
 //Serial.println(distancia);
 contador++;
-Serial.print("el contador va en ");
-Serial.println(contador);
+//Serial.print("el contador va en ");
+//Serial.println(contador);
 if(contador >2){
 Serial.println("toma foto!");
+//Serial.println(distancia);
 delay(5000);
 contador=0;
 }
