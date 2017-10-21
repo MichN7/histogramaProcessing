@@ -20,13 +20,11 @@ delayMicroseconds(10);
 tiempo=pulseIn(echo,HIGH);
 distancia=long(.017*tiempo);
 if(distancia<55 && distancia>25){
-//Serial.println("la distancia es ");
-//Serial.println(distancia);
+
 contador++;
-//Serial.print("el contador va en ");
-//Serial.println(contador);
+
 if(contador >2){
-Serial.println("toma foto!");
+Serial.println("#");
 //Serial.println(distancia);
 delay(5000);
 contador=0;
@@ -35,7 +33,7 @@ contador=0;
 else{
 contador=0;
 }
-Serial.println(distancia);
-delay(700);
+//Serial.println(distancia);
+delay(800);
   
 }
